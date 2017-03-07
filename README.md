@@ -1,11 +1,11 @@
 <h1>Customer Management System</h1>
 program content:
 <ul>
-<li>1. Servlet 3.0.1</li>
-<li>2. JDBC as database driver</li>
-<li>3. MySql database</li>
-<li>4. DBCP2 is also used for data source</li>
-<li>5. JDBC for mapping retrieved data</li>
+<ol>1. Servlet 3.0.1</ol>
+<ol>2. JDBC as database driver</ol>
+<ol>3. MySql database</ol>
+<ol>4. DBCP2 is also used for data source</ol>
+<ol>5. JDBC for mapping retrieved data</ol>
 </ul>
 <h2>Program Feature</h2>
 <ul>
