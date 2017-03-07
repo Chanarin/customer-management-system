@@ -1,12 +1,13 @@
 <h1>Customer Management System</h1>
 program content:
-1. Servlet 3.0.1
-2. JDBC as database driver
-3. MySql database
-4. DBCP2 is also used for data source
-5. JDBC for mapping retrieved data
+<ul>
+<li>1. Servlet 3.0.1</li>
+<li>2. JDBC as database driver</li>
+<li>3. MySql database</li>
+<li>4. DBCP2 is also used for data source</li>
+<li>5. JDBC for mapping retrieved data</li>
+</ul>
 <h2>Program Feature</h2>
-This project includes:
 <ul>
 	<li>User Login using mockup data</li>
 	<li>Customer List with phone/address filter and pagination</li>
