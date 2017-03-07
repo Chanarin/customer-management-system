@@ -1,19 +1,16 @@
-<<<<<<< HEAD
-# customer-managemt-system
-=======
-<<<<<<< HEAD
-# customer-managemt-system
-=======
-<h1>Customer Management System (JDBC & Servlet)</h1>
-
-This project is developed for the assignment requirement. I use Servlet 3.0.1 for http request handling and JDBC as database driver connecting and manipulating to MySql database. DBCP2 is also used for data source management and JDBC Template is used for mapping retrieved data to a model.
-<h2>Feature</h2>
+<h1>Customer Management System</h1>
+program content:
+1. Servlet 3.0.1
+2. JDBC as database driver
+3. MySql database
+4. DBCP2 is also used for data source
+5. JDBC for mapping retrieved data
+<h2>Program Feature</h2>
 This project includes:
 <ul>
-	<li>User Login using 2 mockup list of users</li>
+	<li>User Login using mockup data</li>
 	<li>Customer List with phone/address filter and pagination</li>
 	<li>Create, read, update, delete customer</li>
-	<li>Logout</li>
 </ul>
 
 <h2>Installation for Development Environment</h2>
@@ -21,11 +18,11 @@ This project includes:
 
 1. Clone project from this repository:
 <pre>
-git clone https://github.com/hangsopheak/customer-managment-system.git
+git clone git@github.com:Chanarin/customer-management-system.git
 </pre>
 
 2. Import database from customer-management.sql in the root of project
-3. Update database connection configuration in src/main/resources/application.properties
+3. Update database connection configuration in src/main/resources/application.properties as your user access to database.
 4. cd to project directory
 5. Install maven dependencies:
 <pre>
@@ -53,6 +50,3 @@ username: admin, password: adminPassword
 username: user-test, password: userPassword
 </pre>
 
-11. You have done it!!!
->>>>>>> Second commit
->>>>>>> add read me
