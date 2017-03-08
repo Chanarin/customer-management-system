@@ -108,7 +108,6 @@ public class CustomerDao {
 	}
 
 }
-
   final class CustomerMapper implements RowMapper<Customer> {
 
 	public Customer mapRow(ResultSet rs, int rowNum) throws SQLException {
