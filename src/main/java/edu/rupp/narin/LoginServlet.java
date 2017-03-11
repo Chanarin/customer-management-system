@@ -1,4 +1,4 @@
-package com.rupp.sopheak;
+package edu.rupp.narin;
 
 
 import model.User;

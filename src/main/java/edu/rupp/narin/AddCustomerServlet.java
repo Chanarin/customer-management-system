@@ -1,4 +1,4 @@
-package com.rupp.sopheak;
+package edu.rupp.narin;
 
 
 
@@ -24,13 +24,13 @@ import model.Message;
 /**
  * Servlet implementation class Login
  */
-@WebServlet("/update-customer")
-public class UpdateCustomerServlet extends HttpServlet {
+@WebServlet("/add-customer")
+public class AddCustomerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public UpdateCustomerServlet() {
+    public AddCustomerServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -47,7 +47,6 @@ public class UpdateCustomerServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
 		Message m = new Message();
 		boolean valid = EmailValidator.getInstance().isValid(request.getParameter("email"));
 		if(!valid){
@@ -56,7 +55,7 @@ public class UpdateCustomerServlet extends HttpServlet {
 		}
 		
 		if(valid){
-			//System.out.println("zzz" + request.getParameter("firstname"));
+			System.out.println("zzz" + request.getParameter("firstname"));
 			if(request.getParameter("firstname").isEmpty() || 
 				request.getParameter("lastname").isEmpty() || 
 				request.getParameter("phone_number").isEmpty() ||
@@ -64,8 +63,12 @@ public class UpdateCustomerServlet extends HttpServlet {
 				valid = false;
 				m.setStatus(0);
 				m.setMessage("Please fill all require field");
-			}	
+				//System.out.println("aaa");
+
+			}
+			
 		}
+		
 		
 		if(valid){
 			Customer customer = new Customer();
@@ -76,16 +79,14 @@ public class UpdateCustomerServlet extends HttpServlet {
 			customer.setAddress(request.getParameter("address"));
 			customer.setPhone(request.getParameter("phone_number"));
 			customer.setDobFromString(request.getParameter("dob"));
-			customer.setUpdatedDate(new Date());
-			int id = Integer.parseInt(request.getParameter("id"));
-		
-			CustomerDao c = new CustomerDao();
-			if(c.update(id, customer)){
+			customer.setCreatedDate(new Date());
+			CustomerDao c = new CustomerDao();	
+			if(c.insert(customer)){
 				m.setStatus(1);
-				m.setMessage("Customer is updated successfully");
+				m.setMessage("Customer is added successfully");
 			}else{
 				m.setStatus(0);
-				m.setMessage("Updating customer error");
+				m.setMessage("Adding customer error");
 			}
 		}
 		
@@ -98,6 +99,6 @@ public class UpdateCustomerServlet extends HttpServlet {
         mapper.writeValue(out, m);
 
 	}
-	
+
 
 }
